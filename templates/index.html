@@ -8,7 +8,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -25,7 +28,7 @@
         <span class="hamburger-btn material-symbols-rounded">menu</span>
         <a href="#" class="logo">
           <!-- <img src="static\img\logo.png" alt="logo" /> -->
-          <h2 class="orange-logo">Future </h2>
+          <h2 class="orange-logo">Future</h2>
           <h2 class="green-logo">Folio</h2>
         </a>
         <ul class="links">
@@ -44,7 +47,11 @@
       <span class="close-btn material-symbols-rounded">close</span>
       <div class="form-box login">
         <div class="form-details">
-          <img src="https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-ff-company-logo-vector-template-design-illustration-png-image_771709.jpg" alt="logo " style="max-width: 330px;">
+          <img
+            src="https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-ff-company-logo-vector-template-design-illustration-png-image_771709.jpg"
+            alt="logo "
+            style="max-width: 330px"
+          />
         </div>
         <div class="form-content">
           <h2>LOGIN</h2>
@@ -68,7 +75,11 @@
       </div>
       <div class="form-box signup">
         <div class="form-details">
-          <img src="https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-ff-company-logo-vector-template-design-illustration-png-image_771709.jpg" alt="logo " style="max-width: 330px;">
+          <img
+            src="https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-ff-company-logo-vector-template-design-illustration-png-image_771709.jpg"
+            alt="logo "
+            style="max-width: 330px"
+          />
         </div>
         <div class="form-content">
           <h2>SIGNUP</h2>
@@ -97,11 +108,75 @@
         </div>
       </div>
     </div>
-    <main></main>
+    <main>
+      <div class="hero-section">
+        <div class="hero-left">
+          <div class="hero-section-heading">
+            Welcome to <span class="orange-logo">Future </span>
+            <span class="green-logo">Folio</span>
+          </div>
+          <div class="hero-section-heading hero-section-sub-heading">
+            "<span class="role"></span>"
+          </div>
+
+          <div class="hero-section-description">
+            <b>Future Folio</b> aims to empower 12th-grade students by providing
+            personalized career guidance through an intuitive web application,
+            using machine learning to recommend the best educational and career
+            paths based on their unique interests, skills, and aspirations.
+          </div>
+          <button class="animated-button">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">Explore Services</span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hero-right">
+          
+        </div>
+      </div>
+    </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     <footer></footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: [
+          "Turning Dreams into Career Paths",
+          "Where Aspirations Meet Reality",
+          "Your Guide to a Bright Future",
+          "Discover the Career That Fits You",
+          "Mapping Your Path to Success",
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+    </script>
   </body>
 </html>

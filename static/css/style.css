@@ -71,14 +71,15 @@ header {
   font-style: italic;  
 }
 
-.navbar .logo .orange-logo {
+.orange-logo {
   color: rgb(255, 136, 0);
   margin-right: 5px;
 }
 
-.navbar .logo .green-logo {
+.green-logo {
   color: forestgreen;
   margin-left: 5px;
+  
 }
 
 
@@ -374,4 +375,160 @@ form button:hover {
 main{
   position: absolute;
   top: 12vh;
+  width: 100%;
+  height: 88vh;
 }
+
+
+.hero-section{
+  width: 100%;
+  height: 100%;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.hero-left{
+  width: 65%;
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  gap: 2rem;
+  padding-left: 60px;
+  padding-top: 75px;
+}
+
+.hero-section-heading{
+  font-size: 2rem;
+  color: black;
+  font-weight: 500;
+}
+
+.hero-section-heading span{
+  font-style: italic;
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.role{
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.hero-section-sub-heading{
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.hero-section-description{
+  margin-top: 1rem;
+  width: 70%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.animated-button {
+  width: max-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--primary-color);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: white;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: white;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--primary-color);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+.hero-right{
+  width: 35%;
+  height: 100%;
+  float: right;
+  background-color: red;
+}
+
