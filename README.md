@@ -23,4 +23,4 @@ Welcome to FutureFolio, a personalized career guidance web application designed 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/HemanthReddy-24/Future-Folio
-   cd futurefolio
+   cd Future-Folio
