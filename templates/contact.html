@@ -10,6 +10,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/contact.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link
@@ -20,7 +24,12 @@
       src="{{ url_for('static', filename='js/script.js') }}"
       defer
     ></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -41,19 +50,145 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="contact_us_6">
+        <div class="responsive-container-block container">
+          <form class="form-box">
+            <div class="container-block form-wrapper">
+              <div class="mob-text">
+                <p class="text-blk contactus-head">Get in Touch</p>
+              </div>
+              <div class="responsive-container-block" id="i2cbk">
+                <div
+                  class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                  id="i10mt-3"
+                >
+                  <p class="text-blk input-title">Name</p>
+                  <input
+                    class="input"
+                    id="ijowk-3"
+                    name="FirstName"
+                    placeholder="Please enter first name..."
+                  />
+                </div>
+                <div
+                  class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                  id="ip1yp"
+                >
+                  <p class="text-blk input-title">Email</p>
+                  <input
+                    class="input"
+                    id="ipmgh-3"
+                    name="Email"
+                    placeholder="Please enter email..."
+                  />
+                </div>
+                <div
+                  class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                  id="ih9wi"
+                >
+                  <p class="text-blk input-title">Phone Number</p>
+                  <input
+                    class="input"
+                    id="imgis-3"
+                    name="PhoneNumber"
+                    placeholder="Please enter phone number..."
+                  />
+                </div>
+                <div
+                  class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
+                  id="i634i-3"
+                >
+                  <p class="text-blk input-title">What do you have in Mind ?</p>
+                  <textarea
+                    class="textinput"
+                    id="i5vyy-3"
+                    placeholder="Please enter query..."
+                  ></textarea>
+                </div>
+              </div>
+              <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+                Submit
+              </button>
+            </div>
+          </form>
+          <div
+            class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12"
+            id="i772w"
+          >
+            <div class="map-part">
+              <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
+                Reach us at
+              </p>
+              <div class="social-media-links mob">
+                <a class="social-icon-link" href="tel:+917382797690" id="ph-no" target="_blank">
+                  <img width="48" height="48" src="https://img.icons8.com/tiny-color/48/phone.png" alt="phone"/>
+                </a>
+                <a class="social-icon-link" href="https://www.linkedin.com/in/hemanthreddykalakota/" id="ix94i-2-2" target="_blank">
+                  <img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
+                </a>
+                <a class="social-icon-link" href="https://github.com/HemanthReddy-24" id="itixd" target="_blank">
+                  <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/>
+                </a>
+                <a class="social-icon-link" href="mailto:kalakotahemanthreddy24@gmail.com" id="izxvt" target="_blank">
+                  <img width="48" height="48" src="https://img.icons8.com/color/48/gmail-new.png " alt="gmail-new"/>
+                </a>
+                <a class="social-icon-link" href="https://www.instagram.com/hemanth_reddy_k_1/" id="izldf-2-2" target="_blank">
+                  <img width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1"/>
+                </a>
+              </div>
+              <div class="map-box container-block">
+                Map will be updated Soon here!......
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link px-2 text-body-secondary">Services</a></li>
-            <li class="nav-item"><a href="{{ url_for('blogs') }}" class="nav-link px-2 text-body-secondary">Blogs</a></li>
-            <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link px-2 text-body-secondary">Contact</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2024 made with ❤️ for KARE</p>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a
+            href="{{ url_for('index') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('about') }}"
+            class="nav-link px-2 text-body-secondary"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('services') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('blogs') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Blogs</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('contact') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">
+        © 2024 made with ❤️ for KARE
+      </p>
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
