@@ -21,6 +21,7 @@
       src="{{ url_for('static', filename='js/script.js') }}"
       defer
     ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
     <header>
@@ -33,11 +34,11 @@
         </a>
         <ul class="links">
           <span class="close-btn material-symbols-rounded">close</span>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Contact us</a></li>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact us</a></li>
         </ul>
         <button class="login-btn">Log in</button>
       </nav>
@@ -109,54 +110,64 @@
       </div>
     </div>
     <main>
-      <div class="hero-section">
-        <div class="hero-left">
-          <div class="hero-section-heading">
-            Welcome to <span class="orange-logo">Future </span>
-            <span class="green-logo">Folio</span>
-          </div>
-          <div class="hero-section-heading hero-section-sub-heading">
-            "<span class="role"></span>"
-          </div>
+      <div class="main-hero">
+        <div class="hero-section">
+          <div class="hero-left">
+            <div class="hero-section-heading">
+              Welcome to <span class="orange-logo">Future </span>
+              <span class="green-logo">Folio</span>
+            </div>
+            <div class="hero-section-heading hero-section-sub-heading">
+              "<span class="motivation"></span>"
+            </div>
 
-          <div class="hero-section-description">
-            <b>Future Folio</b> aims to empower 12th-grade students by providing
-            personalized career guidance through an intuitive web application,
-            using machine learning to recommend the best educational and career
-            paths based on their unique interests, skills, and aspirations.
+            <div class="hero-section-description">
+              <b>Future Folio</b> aims to empower 12th-grade students by
+              providing personalized career guidance through an intuitive web
+              application, using machine learning to recommend the best
+              educational and career paths based on their unique interests,
+              skills, and aspirations.
+            </div>
+            <button class="animated-button">
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text">Explore Services</span>
+              <span class="circle"></span>
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
           </div>
-          <button class="animated-button">
-            <svg
-              viewBox="0 0 24 24"
-              class="arr-2"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-            <span class="text">Explore Services</span>
-            <span class="circle"></span>
-            <svg
-              viewBox="0 0 24 24"
-              class="arr-1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div class="hero-right">
-          
+          <div class="hero-right"></div>
         </div>
       </div>
     </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
-    <footer></footer>
+    <footer class="py-3 my-4" >
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link px-2 text-body-secondary">About</a></li>
+          <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link px-2 text-body-secondary">Services</a></li>
+          <li class="nav-item"><a href="{{ url_for('blogs') }}" class="nav-link px-2 text-body-secondary">Blogs</a></li>
+          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link px-2 text-body-secondary">Contact</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2024 made with ❤️ for KARE</p>
+  </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script
@@ -164,7 +175,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      var typeData = new Typed(".role", {
+      var typeData = new Typed(".motivation", {
         strings: [
           "Turning Dreams into Career Paths",
           "Where Aspirations Meet Reality",
