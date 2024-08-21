@@ -1,8 +1,8 @@
 :root {
   --primary-color: #4070f4;
   --secondary-color: #2ecc71;
-  /* --bg-color: #cdfcfe; */
-  --bg-color: white;
+  --bg-color: #cdfcfe;
+  /* --bg-color: white; */
 }
 
 .contact_us_6 * {

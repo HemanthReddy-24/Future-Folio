@@ -502,9 +502,14 @@ main{
 
 .animated-button:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: white;
+  color: white !important;
   border-radius: 12px;
   font-weight: 700;
+}
+
+#explore-services-btn:hover{
+  text-decoration: none;
+  color: white !important;
 }
 
 .animated-button:hover .arr-1 {
@@ -540,7 +545,8 @@ main{
   height: 100%;
   float: right;
   transform: translate(-15%,0);
-  background: url(https://www.brainwonders.in/page_images/2024-03-28-13-10-03Brainwonders_Home_Banner_Image.webp);
+  /* background: url(https://www.brainwonders.in/page_images/2024-03-28-13-10-03Brainwonders_Home_Banner_Image.webp); */
+  background: url(https://cdn-keldgb.nitrocdn.com/CgOIgOvfJqkqaSdiRlBMMZbTlvzpnwBx/assets/images/optimized/rev-0097035/828biz.com/wp-content/uploads/2024/02/LearnNew.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
