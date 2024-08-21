@@ -1,0 +1,111 @@
+:root {
+  --primary-color: #4070f4;
+  --secondary-color: #2ecc71;
+  /* --bg-color: #cdfcfe; */
+  --bg-color: white;
+}
+
+.about-us-1 {
+  width: 100%;
+  height: 100%;
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5rem; */
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.about-us-1 .about-left {
+  width: 50%;
+  height: 80vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://cdn-keldgb.nitrocdn.com/CgOIgOvfJqkqaSdiRlBMMZbTlvzpnwBx/assets/images/optimized/rev-0097035/828biz.com/wp-content/uploads/2024/02/Two-People-Working-Together-to-Create-Blog-Content.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-1 .about-right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+
+.about-us-1 .hero-section-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.about-us-1 .about-right h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.about-us-1 .about-right .text-para {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.about-us-2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5rem; */
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.about-us-2 .about-right {
+    width: 50%;
+    height: 80vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://cdn-keldgb.nitrocdn.com/CgOIgOvfJqkqaSdiRlBMMZbTlvzpnwBx/assets/images/optimized/rev-0097035/828biz.com/wp-content/uploads/2024/02/AboutUsNew.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .about-us-2 .about-left {
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0rem 1rem;
+  }
+  
+  .about-us-2 .about-left h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .about-us-2 .about-left .text-para {
+    text-align: justify;
+    font-size: 1.2rem;
+    color: black;
+  }

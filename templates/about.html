@@ -10,6 +10,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link
@@ -20,7 +24,12 @@
       src="{{ url_for('static', filename='js/script.js') }}"
       defer
     ></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -42,20 +51,89 @@
       </nav>
     </header>
     <main>
-      
+      <div class="about-us-1">
+        <div class="about-left"></div>
+        <div class="about-right">
+          <div class="hero-section-heading">
+            <span class="orange-logo">Future </span>
+            <span class="green-logo">Folio</span>
+          </div>
+          <h2>About us</h2>
+          <p class="text-para">
+            At <b>FutureFolio</b>, we believe that every student deserves a
+            clear path to a successful and fulfilling career. Navigating the
+            multitude of educational and career options after 12th grade can be
+            overwhelming, and we're here to make that journey easier, smarter,
+            and more personalized.
+          </p>
+          <h2>Our Mission</h2>
+          <p class="text-para">
+            Our mission is to empower 12th-grade students by providing tailored
+            career guidance that aligns with their unique strengths, interests,
+            and aspirations. We combine the power of machine learning with
+            insightful questionnaires to deliver recommendations that help
+            students make informed decisions about their future.
+          </p>
+        </div>
+      </div>
+      <div class="about-us-2">
+        <div class="about-left">
+          <h2>What We Do</h2>
+          <p class="text-para">
+            <b>FutureFolio</b> offers a dynamic and user-friendly platform where students can explore their potential and discover the career paths best suited to them. By answering a series of carefully crafted multiple-choice questions, students provide us with valuable insights into their preferences, skills, and goals. Our advanced algorithms then analyze this data to suggest personalized educational and career options, guiding students towards paths that resonate with their true potential.
+          </p>
+          <h2>Join Us on the Journey</h2>
+          <p class="text-para">
+            At <b>FutureFolio</b>, we are passionate about helping students turn their dreams into reality. Whether you're a student looking for direction or a parent wanting the best for your child's future, we invite you to explore the possibilities with us. Together, let's map out a future that's as unique as you are.
+          </p>
+        </div>
+        <div class="about-right"></div>
+      </div>
     </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link px-2 text-body-secondary">Services</a></li>
-            <li class="nav-item"><a href="{{ url_for('blogs') }}" class="nav-link px-2 text-body-secondary">Blogs</a></li>
-            <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link px-2 text-body-secondary">Contact</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2024 made with ❤️ for KARE</p>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a
+            href="{{ url_for('index') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('about') }}"
+            class="nav-link px-2 text-body-secondary"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('services') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('blogs') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Blogs</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('contact') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">
+        © 2024 made with ❤️ for KARE
+      </p>
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
