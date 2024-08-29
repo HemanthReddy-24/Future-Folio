@@ -10,6 +10,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/services.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
     <link
@@ -20,7 +24,12 @@
       src="{{ url_for('static', filename='js/script.js') }}"
       defer
     ></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -41,19 +50,81 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="services-section">
+        <div class="services-1">
+          <div class="services-left"></div>
+          <div class="services-right">
+            <div class="hero-section-heading">
+              <span class="orange-logo">Future </span>
+              <span class="green-logo">Folio</span>
+            </div>
+            <h2>Our Services</h2>
+            <p class="text-para">
+              At <b>FutureFolio</b>, we offer a comprehensive suite of services
+              designed to guide 12th-grade students towards their ideal careers.
+              Our personalized career recommendations are crafted through an
+              interactive questionnaire that assesses your unique interests,
+              skills, and aspirations. We provide detailed insights into
+              potential career paths, including educational requirements, job
+              prospects, and industry trends. Our platform also offers skill
+              assessments, progress tracking, and access to valuable resources,
+              ensuring you're well-prepared for the future. Whether you're
+              exploring your options or ready to take the next step, FutureFolio
+              is here to support your journey with expert guidance every step of
+              the way.
+            </p>
+          </div>
+        </div>
+        <div class="services-2">
+          
+        </div>
+      </div>
+    </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
     </div>
     <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="{{ url_for('services') }}" class="nav-link px-2 text-body-secondary">Services</a></li>
-            <li class="nav-item"><a href="{{ url_for('blogs') }}" class="nav-link px-2 text-body-secondary">Blogs</a></li>
-            <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link px-2 text-body-secondary">Contact</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2024 made with ❤️ for KARE</p>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a
+            href="{{ url_for('index') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('about') }}"
+            class="nav-link px-2 text-body-secondary"
+            >About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('services') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Services</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('blogs') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Blogs</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="{{ url_for('contact') }}"
+            class="nav-link px-2 text-body-secondary"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">
+        © 2024 made with ❤️ for KARE
+      </p>
     </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>

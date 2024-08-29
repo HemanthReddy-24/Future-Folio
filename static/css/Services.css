@@ -1,0 +1,67 @@
+:root {
+  --primary-color: #4070f4;
+  --secondary-color: #2ecc71;
+  /* --bg-color: #cdfcfe; */
+  --bg-color: white;
+}
+
+.services-section {
+  width: 100%;
+  height: 100%;
+  margin-top: 12vh;
+}
+
+.services-1 {
+  width: 100%;
+  height: 100%;
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 5rem; */
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.services-1 .services-left {
+  width: 50%;
+  height: 80vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://cdn-keldgb.nitrocdn.com/CgOIgOvfJqkqaSdiRlBMMZbTlvzpnwBx/assets/images/optimized/rev-0097035/828biz.com/wp-content/uploads/2024/02/ServicesNew2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services-1 .services-right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+
+.services-1 .hero-section-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.services-1 .services-right h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.services-1 .services-right .text-para {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: black;
+}

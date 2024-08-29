@@ -89,6 +89,7 @@ header {
   gap: 35px;
   list-style: none;
   align-items: center;
+  margin-top: 7px;
 }
 
 .navbar .close-btn {
@@ -101,7 +102,10 @@ header {
 }
 
 .navbar .links .active{
-  text-decoration: underline 2px solid ;
+  padding: 10%;
+  border-radius: 20px;
+  color: var(--primary-color);
+  background-color: white;
 }
 
 
