@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/services.css') }}"
+      href="{{ url_for('static', filename='css/dashboard.css') }}"
     />
     <link
       rel="stylesheet"
@@ -24,6 +24,13 @@
       src="{{ url_for('static', filename='js/script.js') }}"
       defer
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -48,39 +55,16 @@
           <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
           <li><a href="{{ url_for('contact') }}">Contact us</a></li>
         </ul>
-        <button class="login-btn"><a href="/login" >Login</a></button>
+        <button class="login-btn"><a href="/logout">Logout</a></button>
       </nav>
     </header>
     <main>
-      <div class="services-section">
-        <div class="services-1">
-          <div class="services-left"></div>
-          <div class="services-right">
+        <div class="greeting-msg">
             <div class="hero-section-heading">
-              <span class="orange-logo">Future </span>
-              <span class="green-logo">Folio</span>
-            </div>
-            <h2>Our Services</h2>
-            <p class="text-para">
-              At <b>FutureFolio</b>, we offer a comprehensive suite of services
-              designed to guide 12th-grade students towards their ideal careers.
-              Our personalized career recommendations are crafted through an
-              interactive questionnaire that assesses your unique interests,
-              skills, and aspirations. We provide detailed insights into
-              potential career paths, including educational requirements, job
-              prospects, and industry trends. Our platform also offers skill
-              assessments, progress tracking, and access to valuable resources,
-              ensuring you're well-prepared for the future. Whether you're
-              exploring your options or ready to take the next step, FutureFolio
-              is here to support your journey with expert guidance every step of
-              the way.
-            </p>
-          </div>
+                Welcome,<b><strong>{{user.name}}</strong></b> to <span class="orange-logo">Future </span>
+                <span class="green-logo">Folio</span>
+              </div>
         </div>
-        <div class="services-2">
-          
-        </div>
-      </div>
     </main>
     <div class="back-top">
       <a href="#"><i class="fas fa-arrow-up"></i></a>
