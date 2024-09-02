@@ -1,8 +1,8 @@
 :root {
   --primary-color: #4070f4;
   --secondary-color: #2ecc71;
-  /* --bg-color: #cdfcfe; */
-  --bg-color: white;
+  --bg-color: #cdfcfe;
+  /* --bg-color: white; */
 }
 
 .services-section {
@@ -64,4 +64,143 @@
   text-align: justify;
   font-size: 1.2rem;
   color: black;
+}
+
+.serviceBox {
+  color: #e85c90;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.serviceBox .title {
+  background: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  margin: 0 0 30px;
+  border: 3px solid #e85c90;
+  display: inline-block;
+}
+.serviceBox .service-content {
+  color: #fff;
+  background: #e85c90;
+  padding: 15px;
+  margin: 0 0 40px;
+  border-radius: 30px;
+  border: 10px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  height: 680px;
+}
+.serviceBox .description {
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+}
+.serviceBox .service-icon {
+  background: #e85c90;
+  font-size: 40px;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 100px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+}
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after {
+  content: "";
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+}
+.serviceBox .service-icon:after {
+  background: #e85c90;
+  width: 3px;
+  height: 40px;
+  margin: 0 auto;
+  box-shadow: none;
+  border-radius: 0;
+  left: 0;
+  right: 0;
+  top: -40px;
+}
+.serviceBox.blue {
+  color: var(--primary-color);
+}
+.serviceBox.blue .title {
+  border-color: var(--primary-color);
+}
+.serviceBox.blue .service-content,
+.serviceBox.blue .service-icon,
+.serviceBox.blue .service-icon:after {
+  background: var(--primary-color);
+}
+.serviceBox.cyan {
+  color: #31bfc4;
+}
+.serviceBox.cyan .title {
+  border-color: #31bfc4;
+}
+.serviceBox.cyan .service-content,
+.serviceBox.cyan .service-icon,
+.serviceBox.cyan .service-icon:after {
+  background: #31bfc4;
+}
+.serviceBox.purple {
+  color: #8746ae;
+}
+.serviceBox.purple .title {
+  border-color: #8746ae;
+}
+.serviceBox.purple .service-content,
+.serviceBox.purple .service-icon,
+.serviceBox.purple .service-icon:after {
+  background: #8746ae;
+}
+@media only screen and (max-width: 990px) {
+  .serviceBox {
+    margin: 0 0 40px;
+  }
+}
+
+.login-box {
+  width: 80vw;
+  height: auto;
+  margin-left: 10vw;
+  margin-top: 5vh;
+}
+
+.login-box h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  border: 5px solid var(--primary-color);
+  background-color: white;
+}
+
+.login-box p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: justify;
+  max-width: 80%;
+  margin: 20px 10%;
+}
+
+
+.login-box p strong {
+  background-color: yellow;
 }
