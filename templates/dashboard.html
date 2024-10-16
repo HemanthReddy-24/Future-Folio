@@ -41,13 +41,19 @@
           <h2 class="orange-logo">Future</h2>
           <h2 class="green-logo">Folio</h2>
         </a>
+        <ul class="links">
+          <span class="close-btn material-symbols-rounded">close</span>
+          <li><a href="#" >Career Guidance</a></li>
+          <li><a href="{{ url_for('tips') }}">Tips</a></li>
+          <li><a href="{{ url_for('stories') }}">Success Stories</a></li>
+        </ul>
         <button
           class="btn"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#staticBackdrop"
           aria-controls="staticBackdrop"
-          style="color: white; font-weight: 600;"
+          style="color: white; font-weight: 600"
         >
           <strong><b>Logout</b></strong>
         </button>
@@ -60,7 +66,6 @@
           aria-labelledby="staticBackdropLabel"
         >
           <div class="offcanvas-header">
-            <!-- <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5> -->
             <button
               type="button"
               class="btn-close"
@@ -69,63 +74,17 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <div style="text-align: center; color: black;">Are you sure you want to log out?</div>
+            <div style="text-align: center; color: black">
+              Are you sure you want to log out?
+            </div>
             <div class="log-out"><a href="/logout">logout</a></div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <div class="greeting-msg">
-        <div class="hero-section-heading">
-          Welcome,<b><strong>{{user.name}}</strong></b> to
-          <span class="orange-logo">Future </span>
-          <span class="green-logo">Folio</span>
-        </div>
-      </div>
+      
     </main>
-    <footer class="py-3 my-4">
-      <!-- <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-          <a
-            href="{{ url_for('index') }}"
-            class="nav-link px-2 text-body-secondary"
-            >Home</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="{{ url_for('about') }}"
-            class="nav-link px-2 text-body-secondary"
-            >About</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="{{ url_for('services') }}"
-            class="nav-link px-2 text-body-secondary"
-            >Services</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="{{ url_for('blogs') }}"
-            class="nav-link px-2 text-body-secondary"
-            >Blogs</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            href="{{ url_for('contact') }}"
-            class="nav-link px-2 text-body-secondary"
-            >Contact</a
-          >
-        </li>
-      </ul> -->
-      <p class="text-center text-body-secondary">
-        © 2024 made with ❤️ for KARE
-      </p>
-    </footer>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

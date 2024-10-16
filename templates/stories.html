@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Future Folio - a Career Guidance System</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/dashboard.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/Stories.css') }}"
+    />
+    <script
+      src="{{ url_for('static', filename='js/script.js') }}"
+      defer
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <span class="hamburger-btn material-symbols-rounded">menu</span>
+        <a href="{{ url_for('dashboard') }}" class="logo">
+          <h2 class="orange-logo">Future</h2>
+          <h2 class="green-logo">Folio</h2>
+        </a>
+        <ul class="links">
+          <span class="close-btn material-symbols-rounded">close</span>
+          <li><a href="{{ url_for('dashboard') }}">Career Guidance</a></li>
+          <li><a href="{{ url_for('tips') }}">Tips</a></li>
+          <li><a href="#">Success Stories</a></li>
+        </ul>
+        <button
+          class="btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#staticBackdrop"
+          aria-controls="staticBackdrop"
+          style="color: white; font-weight: 600"
+        >
+          <strong><b>Logout</b></strong>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start logout-offcanvas"
+          data-bs-backdrop="static"
+          tabindex="-1"
+          id="staticBackdrop"
+          aria-labelledby="staticBackdropLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div style="text-align: center; color: black">
+              Are you sure you want to log out?
+            </div>
+            <div class="log-out"><a href="/logout">logout</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section id="hero">
+          <h1>
+            Explore Real-Life Success Stories and Be Inspired to Reach Your
+            Potential
+          </h1>
+          <p style="text-align: justify;">
+            At FutureFolio, we believe that every student has the potential to
+            achieve greatness. Here, you’ll find inspiring stories from students
+            who used our career guidance to discover their true calling and
+            excel in their chosen fields. These real-life success stories
+            demonstrate the power of personalized career advice and
+            determination.
+          </p>
+        </section>
+
+        <!-- Featured Success Stories Section -->
+        <section id="success-stories">
+          <h2>Featured Success Stories</h2>
+          <div class="story-cards">
+            <!-- Example Story Card -->
+            <div class="story-card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegpiKH-mghJe_c6GGfUM3vs5u1MNU4yGzEQ&s" alt="Musk's Image" />
+              <h3>Elon Musk</h3>
+              <p><strong>Tesla Motors, Space X, X(formerly Twitter)</strong></p>
+              <blockquote>
+                "When something is important enough, you do it even if the odds are not in your favor."
+              </blockquote>
+              <button onclick="loadStory('elon-musk')">Read More</button>
+            </div>
+            <div class="story-card">
+              <img src="https://media.licdn.com/dms/image/v2/D4E03AQFrmDuWUxQoMg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715645354619?e=2147483647&v=beta&t=dkLl7DSveuVd5sakuJ-nk0akumosrA4bx8UCOytIsh0" alt="Person's Image" />
+              <h3>Sundar Pichai</h3>
+              <p><strong>CEO of Google</strong></p>
+              <blockquote>
+                "Wear your failure as a badge of honor."
+              </blockquote>
+              <button onclick="loadStory('sundar-pichai')">Read More</button>
+            </div>
+            <div class="story-card">
+              <img src="data:image/webp;base64,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" alt="Person's Image" />
+              <h3>Jeff Bezos</h3>
+              <p><strong>Founder of Amazon</strong></p>
+              <blockquote>
+                "One of the only ways to get out of a tight box is to invent your way out."
+              </blockquote>
+              <button onclick="loadStory('jeff-bezos')">Read More</button>
+            </div>
+            <div class="story-card">
+              <img src="https://img.etimg.com/thumb/msid-90152645,width-650,height-488,imgsize-72534,resizemode-75/baahubali.jpg" alt="Person's Image" />
+              <h3>Prabhas</h3>
+              <p>The Face of Indian Cinema’s Global Success</p>
+              <blockquote>
+                "Dream big, work hard, stay humble."
+              </blockquote>
+              <button onclick="loadStory('prabhas')">Read More</button>
+            </div>
+            <div class="story-card">
+              <img src="https://img.uefa.com/imgml/TP/players/2014/2025/cutoff/63706.png" alt="Person's Image" />
+              <h3>Cristiano Ronaldo </h3>
+              <p>The Relentless Pursuit of Football Excellence</p>
+              <blockquote>
+                "Your love makes me strong, your hate makes me unstoppable."
+              </blockquote>
+              <button onclick="loadStory('cristiano-ronaldo')">Read More</button>
+            </div>
+            <!-- Add more story cards as needed -->
+          </div>
+        </section>
+
+        <!-- Detailed Story Pages -->
+        <section id="story-details" style="display: none">
+          <h2 id="story-title"></h2>
+          <p id="story-bio"></p>>
+          <blockquote id="story-quote"></blockquote>
+          <button onclick="goBack()">Back to Stories</button>
+        </section>
+      </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/Stories.js') }}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

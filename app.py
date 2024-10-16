@@ -92,5 +92,24 @@ def services():
 def blogs():
     return render_template('blogs.html')
 
+
+@app.route('/tips')
+def tips():
+    return render_template('tips.html')
+
+
+@app.route('/stories')
+def stories():
+    return render_template('stories.html')
+
+@app.route('/demos')
+def demos():
+    return render_template('demos.html')
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
