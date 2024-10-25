@@ -107,9 +107,5 @@ def demos():
     return render_template('demos.html')
 
 
-
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)

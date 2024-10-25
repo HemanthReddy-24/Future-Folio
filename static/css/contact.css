@@ -176,7 +176,7 @@
 }
 
 .contact_us_6 ::placeholder {
-  color: black ;
+  color: black;
   opacity: 0.8;
 }
 
@@ -207,7 +207,7 @@
   width: 100%;
   height: 520px;
   color: white;
-  background-color: red;
+  background-image: url(https://images.shiksha.com/mediadata/images/listingGoogle/listingLocationlive140883.jpg);
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -249,7 +249,7 @@
   filter: grayscale(100%);
 }
 
-.contact_us_6 .social-media-links.mob a img:hover{
+.contact_us_6 .social-media-links.mob a img:hover {
   filter: grayscale(0%);
 }
 
