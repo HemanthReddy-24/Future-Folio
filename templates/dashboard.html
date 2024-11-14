@@ -10,6 +10,10 @@
     />
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='css/dash.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="{{ url_for('static', filename='css/dashboard.css') }}"
     />
     <script
@@ -82,7 +86,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="dashboard-main">
       <div class="container">
         <h2>Career Guidance Form</h2>
         <form id="guidanceForm">
@@ -105,7 +109,7 @@
     
             <div id="questionsContainer"></div>
     
-            <button type="submit">Submit</button>
+            <button type="submit" class="btnsub">Submit</button>
         </form>
     
         <!-- This div will display the output -->
