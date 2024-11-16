@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify, redirect,session
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
+import joblib
+import numpy as np
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -105,6 +107,56 @@ def stories():
 @app.route('/demos')
 def demos():
     return render_template('demos.html')
+
+model_mpc=joblib.load("mpc.joblib")
+
+@app.route('/mpc_model', methods=['POST'])
+def model1_prediction():
+    data = list(map(int, request.form.values()))
+    print(list(request.form.values()))
+    data_array = np.array([data])
+    result = model_mpc.predict(data_array)
+    return jsonify({"result": result[0]})
+
+model_bipc=joblib.load("bipc.joblib")
+
+@app.route('/bipc_model', methods=['POST'])
+def model2_prediction():
+    data = list(map(int, request.form.values()))
+    print(list(request.form.values()))
+    data_array = np.array([data])
+    result = model_bipc.predict(data_array)
+    return jsonify({"result": result[0]})
+
+model_cec=joblib.load("cec.joblib")
+
+@app.route('/cec_model', methods=['POST'])
+def model3_prediction():
+    data = list(map(int, request.form.values()))
+    print(list(request.form.values()))
+    data_array = np.array([data])
+    result = model_cec.predict(data_array)
+    return jsonify({"result": result[0]})
+
+model_hec=joblib.load("hec.joblib")
+
+@app.route('/hec_model', methods=['POST'])
+def model4_prediction():
+    data = list(map(int, request.form.values()))
+    print(list(request.form.values()))
+    data_array = np.array([data])
+    result = model_hec.predict(data_array)
+    return jsonify({"result": result[0]})
+
+model_mec=joblib.load("mec.joblib")
+
+@app.route('/mec_model', methods=['POST'])
+def model5_prediction():
+    data = list(map(int, request.form.values()))
+    print(list(request.form.values()))
+    data_array = np.array([data])
+    result = model_mec.predict(data_array)
+    return jsonify({"result": result[0]})
 
 
 if __name__ == '__main__':

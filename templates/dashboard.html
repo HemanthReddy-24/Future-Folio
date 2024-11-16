@@ -10,10 +10,6 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/dash.css') }}"
-    />
-    <link
-      rel="stylesheet"
       href="{{ url_for('static', filename='css/dashboard.css') }}"
     />
     <script
@@ -47,7 +43,7 @@
         </a>
         <ul class="links">
           <span class="close-btn material-symbols-rounded">close</span>
-          <li><a href="#" >Career Guidance</a></li>
+          <li><a href="#">Career Guidance</a></li>
           <li><a href="{{ url_for('tips') }}">Tips</a></li>
           <li><a href="{{ url_for('stories') }}">Success Stories</a></li>
         </ul>
@@ -86,36 +82,530 @@
         </div>
       </nav>
     </header>
-    <main class="dashboard-main">
-      <div class="container">
+    <main>
+      <div class="contain">
         <h2>Career Guidance Form</h2>
         <form id="guidanceForm">
+          <div class="inp">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-    
+            <input type="text" id="name" name="name" required placeholder="enter your name"/>
+          </div>
+
+          <div class="inp">
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-    
+            <input type="number" min="1" max="100" id="age" name="age" required placeholder="enter your age"/>
+          </div>
+
+          <div class="inp">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
+            <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com"/>
+          </div>
+
+          <div class="sel">
             <label for="group">Select your 12th Group:</label>
             <select id="group" name="group" onchange="loadQuestions()" required>
-                <option value="">--Select--</option>
-                <option value="MPC">MPC</option>
-                <option value="BIPC">BIPC</option>
-                <!-- Add other groups here if needed -->
+              <option value="">--Select--</option>
+              <option value="MPC">MPC</option>
+              <option value="BIPC">BIPC</option>
+              <option value="CEC">CEC</option>
+              <option value="HEC">HEC</option>
+              <option value="MEC">MEC</option>
             </select>
-    
-            <div id="questionsContainer"></div>
-    
-            <button type="submit" class="btnsub">Submit</button>
+          </div>
+          <button type="submit">Submit</button>
         </form>
+      </div>
+      <div class="contain" id="guidanceForm11" style="display: none;">
+        <h2>Career Guidance Form</h2>
+        <form id="guidanceForm-mpc">
+          <div class="scr">
+            <label for="name">Physics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Physics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="name">Chemistry:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Chemistry">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Mathematics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Mathematics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Engineering Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Engineering">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
     
-        <!-- This div will display the output -->
-        <div id="outputContainer" class="output-container"></div>
-    </div>
+          <div class="scr">
+            <label for="email">Military Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Military Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Commerce Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Commerce Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          
+          <div class="scr">
+            <label for="email">Legal Studies Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Legal Studies Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Management Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Management Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">Computing Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Computing Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Technology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Technology Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Business Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Business Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Healthcare Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Healthcare/Wellness">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="outputContainer1" class="output-container"></div>
+      </div>
+      <div class="contain" id="guidanceForm12" style="display: none;">
+        <h2>Career Guidance Form</h2>
+        <form id="guidanceForm-bipc">
+          <div class="scr">
+            <label for="name">Biology:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Biology">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="name">Physics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Physics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Chemistry:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Chemistry">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Mathematics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Mathematics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">Medicine Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Medicine_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Veterinary Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Veterinary_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          
+          <div class="scr">
+            <label for="email">Agriculture Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Agriculture_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Nursing Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Nursing_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">BTech Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="BTech_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Pharmacy Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Pharmacy_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Forensic Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Forensic_Science_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Zoology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Zoology_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Geology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Geology_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Microbiology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Microbiology_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Allied Health Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Allied_Health_Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="outputContainer2" class="output-container"></div>
+      </div>
+      <div class="contain" id="guidanceForm13" style="display: none;">
+        <h2>Career Guidance Form</h2>
+        <form id="guidanceForm-cec">
+          <div class="scr">
+            <label for="name">Commerce Knowledge:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Commerce Knowledge">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="name">Economics Knowledge:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Economics Knowledge">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Civics Knowledge:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Civics Knowledge">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Business Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Business Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">Creative Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Creative Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Management Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Management Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          
+          <div class="scr">
+            <label for="email">Technology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Technology Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="outputContainer3" class="output-container"></div>
+      </div>
+      <div class="contain" id="guidanceForm14" style="display: none;">
+        <h2>Career Guidance Form</h2>
+        <form id="guidanceForm-hec">
+          <div class="scr">
+            <label for="name">Mathematics Knowledge:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Mathematics Knowledge">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="name">Economics Knowledge:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Economics Knowledge">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Business Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Business Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Marketing Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Marketing Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Computing Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Computing Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">Technology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Technology Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Public Service Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Public Service Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          
+          <div class="scr">
+            <label for="email">Leadership Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Leadership Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="outputContainer4" class="output-container"></div>
+      </div>
+      <div class="contain" id="guidanceForm15" style="display: none;">
+        <h2>Career Guidance Form</h2>
+        <form id="guidanceForm-mec">
+          <div class="scr">
+            <label for="name">Mathematics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Mathematics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="name">Economics:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Economics">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Commerce:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Commerce">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Business Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="email" name="Business Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+    
+          <div class="scr">
+            <label for="email">Computing Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Computing Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+
+          <div class="scr">
+            <label for="email">Technology Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Technology Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          
+          <div class="scr">
+            <label for="email">Science Interest:</label>
+            <input type="range" min="0" max="10" value="0" class="slider" id="name" name="Science Interest">
+            <span class="value-display" id="rangeValue">0</span>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="outputContainer5" class="output-container"></div>
+      </div>
+
     </main>
+    
+    <script>
+      // Select all sliders and their associated value displays
+      const sliders = document.querySelectorAll(".slider");
+      const valueDisplays = document.querySelectorAll(".value-display");
+      
+      // Initialize and set up event listeners for all sliders
+      sliders.forEach((slider, index) => {
+        // Set the initial value for each slider
+        valueDisplays[index].innerHTML = slider.value;
+      
+        // Update the corresponding value display on input
+        slider.oninput = function () {
+          valueDisplays[index].innerHTML = this.value;
+        };
+      });
+      </script>
+
+<script>
+  document.querySelector("#guidanceForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var x = document.getElementById("guidanceForm11");
+    var y = document.getElementById("guidanceForm12");
+    var p = document.getElementById("guidanceForm13");
+    var q = document.getElementById("guidanceForm14");
+    var r = document.getElementById("guidanceForm15");
+    var z = document.getElementById("group").value;
+    if (z === "MPC") {
+      x.style.display = "block";
+      y.style.display = "none";
+      p.style.display = "none";
+      q.style.display = "none";
+      r.style.display = "none";
+    } else if(z === "BIPC") {
+      x.style.display = "none";
+      y.style.display = "block";
+      p.style.display = "none";
+      q.style.display = "none";
+      r.style.display = "none";
+    } else if(z === "CEC"){
+      x.style.display = "none";
+      y.style.display = "none";
+      p.style.display = "block";
+      q.style.display = "none";
+      r.style.display = "none";
+    } else if(z === "HEC"){
+      x.style.display = "none";
+      y.style.display = "none";
+      p.style.display = "none";
+      q.style.display = "block";
+      r.style.display = "none";
+    } else if(z === "MEC"){
+      x.style.display = "none";
+      y.style.display = "none";
+      p.style.display = "none";
+      q.style.display = "none";
+      r.style.display = "block";
+    }
+  });
+
+  document.querySelector("#guidanceForm-mpc").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = document.getElementById('guidanceForm-mpc');
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+    console.log(formObject);
+    fetch('/mpc_model', {
+      method: 'POST',
+      body: formData  
+    })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('outputContainer1').innerText = data.result;
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+  document.querySelector("#guidanceForm-bipc").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = document.getElementById('guidanceForm-bipc');
+      const formData = new FormData(form);
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+      console.log(formObject);
+      fetch('/bipc_model', {
+        method: 'POST',
+        body: formData ,
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('outputContainer2').innerText = data.result;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    document.querySelector("#guidanceForm-cec").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = document.getElementById('guidanceForm-cec');
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+    console.log(formObject);
+    fetch('/cec_model', {
+      method: 'POST',
+      body: formData  
+    })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('outputContainer3').innerText = data.result;
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+    document.querySelector("#guidanceForm-hec").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = document.getElementById('guidanceForm-hec');
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+    console.log(formObject);
+    fetch('/hec_model', {
+      method: 'POST',
+      body: formData  
+    })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('outputContainer4').innerText = data.result;
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+    document.querySelector("#guidanceForm-mec").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = document.getElementById('guidanceForm-mec');
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+    console.log(formObject);
+    fetch('/mec_model', {
+      method: 'POST',
+      body: formData  
+    })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('outputContainer5').innerText = data.result;
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+
+</script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
